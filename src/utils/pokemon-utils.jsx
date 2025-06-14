@@ -11,7 +11,7 @@ export async function fetchPokemonList() {
     }};
   }
 
-  export async function fetchPokemon(id) {
+    export async function fetchPokemon(id) {
     try {
      const response = await fetch(`${API.POKEMON_API.replace(":id", id)}`) // VA chercher l'url
      const pokemonData = await response.json() //Transforme en .json
