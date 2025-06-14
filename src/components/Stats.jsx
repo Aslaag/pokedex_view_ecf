@@ -1,12 +1,14 @@
 import { StatBar } from "../components/StatBar"
 import { TypeTag } from "../components/TypeTag"
 
-export function Stats() {
+export function Stats(props) {
   return (
     <div>
       <TypeTag/>
       <div>
-        <StatBar/>
+        <div className="flex flex-col gap-2">
+            <StatBar/>
+        </div>
       </div>
     </div>
   )

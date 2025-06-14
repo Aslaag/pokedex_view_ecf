@@ -26,10 +26,11 @@ export function PokemonView() {
     <NavigationArrows/>
     <section className="flex flex-col p-2 items-center">
       {pokemon && <h2 className="uppercase">{pokemon.name}</h2>}
+
       <div className="flex justify-between p-2 w-full">
         <img src={IMG.POKEMON_IMG.replace(":id", pokemonId.id)} alt="" />
-        <Stats/>
-        <ReviewsContainer/>
+        {pokemon &&  <Stats stats={pokemon.base}/>}
+        {pokemon &&  <ReviewsContainer id={pokemon.id}/>}
       </div>
     </section>
     </div>
