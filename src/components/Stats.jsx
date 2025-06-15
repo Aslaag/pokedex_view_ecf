@@ -2,12 +2,16 @@ import { StatBar } from "../components/StatBar"
 import { TypeTag } from "../components/TypeTag"
 
 export function Stats(props) {
+  console.log("Stats : ", props.stats)
   return (
     <div>
       <TypeTag/>
       <div>
         <div className="flex flex-col gap-2">
-            <StatBar/>
+          {Object.entries(props.stats).map(([name, value]) => (
+            <StatBar key={name} name={name} value={value}/>
+            )
+          )}
         </div>
       </div>
     </div>
