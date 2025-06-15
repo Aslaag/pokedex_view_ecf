@@ -13,8 +13,7 @@ export function PokemonView() {
   const [pokemon, setPokemon] = useState(null);
   const [likes, setLikes] = useState(null)
 
-  async function addLike(e) {
-    e.preventDefault();
+  async function addLike() {
     const newLikes = likes + 1;
     setLikes(newLikes)
     await updatePokemon(pokemon.id, newLikes)
@@ -53,7 +52,10 @@ export function PokemonView() {
           </div>
           <div className="flex items-center gap-1">
             <p className="flex">{likes}</p>
-            <Heart onClick={addLike} fill="red"/>
+            <Heart onClick={(e) => {
+              e.preventDefault();
+              addLike();
+            }} fill="red"/>
           </div>
         </div>
         {pokemon &&  <Stats stats={pokemon.base}/>}

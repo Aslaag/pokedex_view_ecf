@@ -2,7 +2,7 @@
   "pokemons": [
     {
       "id": "1",
-      "like": 18,
+      "like": 25,
       "name": "Bulbizarre",
       "types": [
         "Grass",
@@ -5501,6 +5501,18 @@
       "author": "Me",
       "content": "I love this pokemon !",
       "pokemonId": "1"
+    },
+    {
+      "id": "1125",
+      "pokemonId": "1",
+      "author": "ME",
+      "content": "on y croit"
+    },
+    {
+      "id": "c0f7",
+      "pokemonId": "1",
+      "author": "Me",
+      "content": "i try to add a review"
     }
   ]
 }

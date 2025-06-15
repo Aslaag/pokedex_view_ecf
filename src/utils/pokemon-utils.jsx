@@ -24,7 +24,7 @@ export async function fetchPokemon(id) {
 
 export async function updatePokemon(id, likes) {
   try {
-    const response = await fetch(`${API.POKEMON_API.replace(":id", id)}`, {
+    await fetch(`${API.POKEMON_API.replace(":id", id)}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,6 @@ export async function updatePokemon(id, likes) {
     "like": likes
       }),
     })
-    return response;
   }
   catch{(error) => {
     console.error("Fetch error :", error);
@@ -46,6 +45,25 @@ export async function fetchReviews(id) {
     const reviewsData = await response.json() //Transforme en .json
     const reviewsSelectedPokemon =  reviewsData.filter((review) => String(review.pokemonId) === String(id));
     return reviewsSelectedPokemon // retourne le résultat
+  }
+  catch{(error) => {
+    console.error("Fetch error :", error);
+  }};
+}
+
+export async function addReview(id, content) {
+  try {
+    await fetch(`${API.REVIEWS_API}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+    pokemonId: id,
+    author: "Me",
+    content: content,
+      }),
+    })
   }
   catch{(error) => {
     console.error("Fetch error :", error);
