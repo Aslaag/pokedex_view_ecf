@@ -2,7 +2,6 @@ import { StatBar } from "../components/StatBar"
 import { TypeTag } from "../components/TypeTag"
 
 export function Stats(props) {
-  console.log("Stats : ", props.stats)
   return (
     <div>
       <TypeTag/>
