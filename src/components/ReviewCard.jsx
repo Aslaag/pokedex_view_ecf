@@ -1,7 +1,8 @@
-export function ReviewCard() {
+export function ReviewCard(props) {
   return (
-    <>
-      <h2 className="uppercase">Review Card !</h2>  
-    </>
+    <div className="">
+      <p className="">{props.content}</p>
+      <p className="font-bold">Posted by : {props.author}</p>
+    </div>
   )
 }

@@ -25,18 +25,19 @@ export function PokemonView() {
   return (
     <div>
     <NavigationArrows/>
-    <section className="flex flex-col p-2 items-center">
-      {pokemon && <h2 className="uppercase">{pokemon.name}</h2>}
-      {pokemon && <div className="flex gap-2">
-                {pokemon.types.map((type) => (
-                  <TypeTag key={type} name={type}/>
-                  )
-                )}
-              </div>}
-
-      <div className="flex justify-between p-2 w-full">
-        <img src={IMG.POKEMON_IMG.replace(":id", pokemonId.id)} alt="" />
+    <section className="flex w-full">
+      <img src={IMG.POKEMON_IMG.replace(":id", pokemonId.id)} alt="" />
+      <div className="flex flex-col items-center w-full">
+        {pokemon && <h2 className="uppercase">{pokemon.name}</h2>}
+        {pokemon && <div className="flex gap-2">
+          {pokemon.types.map((type) => (
+            <TypeTag key={type} name={type}/>
+            )
+          )}
+        </div>}
         {pokemon &&  <Stats stats={pokemon.base}/>}
+      </div>
+      <div>
         {pokemon &&  <ReviewsContainer id={pokemon.id}/>}
       </div>
     </section>
