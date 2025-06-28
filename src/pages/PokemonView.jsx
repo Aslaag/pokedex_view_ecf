@@ -14,13 +14,16 @@ export function PokemonView() {
   const { id } = useParams();
   const [pokemon, setPokemon] = useState(null);
   const [likes, setLikes] = useState(null)
+  const [isPrevDisabled, setIsPrevDisabled] = useState(false)
+  const [isNextDisabled, setIsNextDisabled] = useState(false)
 
   const currentId = parseInt(id, 10);
+
   const goToNext = () => {
-    if (currentId < 151) navigate(`/pokemon/${currentId + 1}`);
+    if (currentId < 151) navigate(`/pokemon/${currentId + 1}`);;
   };
   const goToPrev = () => {
-    if (currentId > 1) navigate(`/pokemon/${currentId - 1}`);
+    if (currentId > 1) navigate(`/pokemon/${currentId - 1}`);;
   };
 
   async function addLike() {
@@ -49,10 +52,15 @@ export function PokemonView() {
         setLikes(pokemon.like)
       }
     }, [pokemon]);
+
+    useEffect(() => {
+    setIsPrevDisabled(currentId === 1);
+    setIsNextDisabled(currentId === 151);
+  }, [currentId]);
   
   return (
     <div>
-    <NavigationArrows goToPrev={goToPrev} goToNext={goToNext}/>
+    <NavigationArrows isNextDisabled={isNextDisabled} isPrevDisabled={isPrevDisabled} goToPrev={goToPrev} goToNext={goToNext}/>
     <section className="grid grid-cols-3 gap-10 p-5">
       <img src={IMG.POKEMON_IMG.replace(":id", id)} alt="" />
       <div className="flex flex-col items-center">
