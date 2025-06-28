@@ -8,7 +8,9 @@ export function ReviewInput(props) {
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      props.onSubmitReview(reviewInputValue)
+      e.preventDefault();
+      props.onSubmitReview(reviewInputValue);
+      setReviewInputValue("");
     }
   }
 

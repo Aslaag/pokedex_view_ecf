@@ -1,6 +1,6 @@
 import { Heart } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { NavigationArrows } from "../components/NavigationArrows";
 import { ReviewsContainer } from "../components/ReviewsContainer";
 import { Stats } from "../components/Stats";
@@ -8,25 +8,41 @@ import { TypeTag } from "../components/TypeTag";
 import { IMG } from "../constants/pokedex-const";
 import { fetchPokemon, updatePokemon } from "../utils/pokemon-utils";
 
+
 export function PokemonView() {
-  const pokemonId = useParams();
+  const navigate = useNavigate();
+  const { id } = useParams();
   const [pokemon, setPokemon] = useState(null);
   const [likes, setLikes] = useState(null)
 
+  const currentId = parseInt(id, 10);
+  const goToNext = () => {
+    if (currentId < 151) navigate(`/pokemon/${currentId + 1}`);
+  };
+  const goToPrev = () => {
+    if (currentId > 1) navigate(`/pokemon/${currentId - 1}`);
+  };
+
   async function addLike() {
-    const newLikes = likes + 1;
-    setLikes(newLikes)
-    await updatePokemon(pokemon.id, newLikes)
+    const newLikes = (likes || 0) + 1;
+    setLikes(newLikes);
+
+    try {
+      await updatePokemon(pokemon.id, newLikes);
+    } catch (error) {
+      console.error("Erreur lors de la mise à jour des likes :", error);
+      setLikes(likes);
+    }
   }
   
     async function loadPokemon() {
-      const pokemonData = await fetchPokemon(pokemonId.id);
+      const pokemonData = await fetchPokemon(id);
       setPokemon(pokemonData);
     }
   
     useEffect(() => {
       loadPokemon();
-    }, []);
+    }, [id]);
 
      useEffect(() => {
       if (pokemon) {
@@ -36,9 +52,9 @@ export function PokemonView() {
   
   return (
     <div>
-    <NavigationArrows/>
+    <NavigationArrows goToPrev={goToPrev} goToNext={goToNext}/>
     <section className="grid grid-cols-3 gap-10 p-5">
-      <img src={IMG.POKEMON_IMG.replace(":id", pokemonId.id)} alt="" />
+      <img src={IMG.POKEMON_IMG.replace(":id", id)} alt="" />
       <div className="flex flex-col items-center">
         <div className="flex w-full justify-start">
           <div className="flex flex-col mx-auto">
@@ -52,13 +68,18 @@ export function PokemonView() {
           </div>
           <div className="flex items-center gap-1">
             <p className="flex">{likes}</p>
-            <Heart onClick={(e) => {
-              e.preventDefault();
-              addLike();
-            }} fill="red"/>
+            <button
+              type="button"
+              className="hover:cursor-pointer" 
+              onClick={(e) => {
+                e.preventDefault();
+                addLike();
+              }}>
+              <Heart fill="red"/>
+            </button>
           </div>
         </div>
-        {pokemon &&  <Stats stats={pokemon.base}/>}
+        {pokemon &&  <Stats id={pokemon.id} stats={pokemon.base}/>}
       </div>
       <div>
         {pokemon &&  <ReviewsContainer id={pokemon.id}/>}

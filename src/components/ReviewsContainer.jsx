@@ -14,7 +14,7 @@ export function ReviewsContainer(props) {
   
     useEffect(() => {
       loadReviews();
-    }, []);
+    }, [props.id]);
 
     useEffect(() => {
       if (reviewQuery) {

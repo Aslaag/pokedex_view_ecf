@@ -2,7 +2,7 @@
   "pokemons": [
     {
       "id": "1",
-      "like": 26,
+      "like": 34,
       "name": "Bulbizarre",
       "types": [
         "Grass",
@@ -72,7 +72,7 @@
     },
     {
       "id": "3",
-      "like": 7,
+      "like": 8,
       "name": "Florizarre",
       "types": [
         "Grass",
@@ -141,7 +141,7 @@
     },
     {
       "id": "5",
-      "like": 12,
+      "like": 13,
       "name": "Reptincel",
       "types": [
         "Fire"
@@ -210,7 +210,7 @@
     },
     {
       "id": "7",
-      "like": 0,
+      "like": 1,
       "name": "Carapuce",
       "types": [
         "Water"
@@ -728,7 +728,7 @@
     },
     {
       "id": "22",
-      "like": 0,
+      "like": 7,
       "name": "Rapasdepic",
       "types": [
         "Normal",
@@ -2034,7 +2034,7 @@
     },
     {
       "id": "60",
-      "like": 0,
+      "like": 1,
       "name": "Ptitard",
       "types": [
         "Water"
@@ -3451,7 +3451,7 @@
     },
     {
       "id": "101",
-      "like": 0,
+      "like": 1,
       "name": "Électrode",
       "types": [
         "Electric"
@@ -5503,22 +5503,28 @@
       "pokemonId": "1"
     },
     {
-      "id": "1125",
-      "pokemonId": "1",
-      "author": "ME",
-      "content": "on y croit"
+      "id": "8a12",
+      "pokemonId": "101",
+      "author": "Me",
+      "content": "EXPLOSION"
     },
     {
-      "id": "c0f7",
-      "pokemonId": "1",
+      "id": "76ca",
+      "pokemonId": "5",
       "author": "Me",
-      "content": "i try to add a review"
+      "content": "Not the best but cute !"
     },
     {
-      "id": "194f",
-      "pokemonId": "1",
+      "id": "2931",
+      "pokemonId": "6",
       "author": "Me",
-      "content": "une review"
+      "content": "Hi Charizard !!!"
+    },
+    {
+      "id": "8b93",
+      "pokemonId": "60",
+      "author": "Me",
+      "content": "My favourite as a child <3"
     }
   ]
 }
