@@ -7,15 +7,18 @@ export function ReviewsContainer(props) {
   const [reviewQuery, setReviewQuery] = useState("");
   const [pokemonReviews, setPokemonReviews] = useState(null);
   
+   //Fetch the reviews
     async function loadReviews() {
       const pokemonReviewsData = await fetchReviews(props.id);
       setPokemonReviews(pokemonReviewsData);
     }
-  
+
+  //Display the reviews
     useEffect(() => {
       loadReviews();
     }, [props.id]);
 
+    //add a review with query value
     useEffect(() => {
       if (reviewQuery) {
        addReview(props.id, reviewQuery);

@@ -18,15 +18,20 @@ export function PokemonView() {
   const [isPrevDisabled, setIsPrevDisabled] = useState(false)
   const [isNextDisabled, setIsNextDisabled] = useState(false)
 
+  //convert id into number
   const currentId = parseInt(id, 10);
 
+  //Add 1 to pokemon ID
   const goToNext = () => {
     if (currentId < 151) navigate(`/pokemon/${currentId + 1}`);;
   };
+
+  //Minus 1 to pokemon ID
   const goToPrev = () => {
     if (currentId > 1) navigate(`/pokemon/${currentId - 1}`);;
   };
 
+  //Add 1 to the count of likes
   async function addLike() {
     const newLikes = (likes || 0) + 1;
     setLikes(newLikes);
@@ -39,6 +44,7 @@ export function PokemonView() {
     }
   }
   
+  //call the function to fetch the pokemon update when id changes
   useEffect(() => {
     async function loadPokemon() {
       try {
@@ -57,16 +63,18 @@ export function PokemonView() {
     loadPokemon();
   }, [id]);
 
-     useEffect(() => {
+  //call the function to fetch likes via pokemon id
+    useEffect(() => {
       if (pokemon) {
         setLikes(pokemon.like)
       }
     }, [pokemon]);
 
+    //Set limits for disabled arrows
     useEffect(() => {
-    setIsPrevDisabled(currentId === 1);
-    setIsNextDisabled(currentId === 151);
-  }, [currentId]);
+      setIsPrevDisabled(currentId === 1);
+      setIsNextDisabled(currentId === 151);
+    }, [currentId]);
   
   return (
     <div className="pt-5">

@@ -1,6 +1,8 @@
 import { MAX_STAT } from "../constants/stats-constants";
 
 export function StatBar(props) {
+
+  //normalize names
   const statTraduction = {
     "HP": "hp",
     "Attack": "attack",
@@ -9,6 +11,8 @@ export function StatBar(props) {
     "Special defense": "specialDefense",
     "Speed": "speed",
   }
+
+  //fill the stat bar
   const fillBar = props.value * 100 / `${MAX_STAT[statTraduction[props.name]]}`;
 
   return (

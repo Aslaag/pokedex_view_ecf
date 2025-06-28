@@ -7,7 +7,8 @@ export function PokedexHomePage() {
   const [pokemonList, setPokemonList] = useState(null);
   const [pokemonFilter, setPokemonFilter] = useState('');
   const [filterMode, setFilterMode] = useState('both');
-
+  
+  //Filter the list of pokemons
   const filteredPokemonList = pokemonFilter
     ? pokemonList.filter(pokemon => {
         const nameMatch = pokemon.name.toLowerCase().includes(pokemonFilter.toLowerCase());
@@ -20,11 +21,14 @@ export function PokedexHomePage() {
       })
     : pokemonList;
 
+
+  //Fetch the list of filtered pokemon
   async function loadPokemonList() {
     const pokemonListData = await fetchPokemonList();
     setPokemonList(pokemonListData);
   }
 
+  //Display the list of filtered pokemon
   useEffect(() => {
     loadPokemonList();
   }, []);

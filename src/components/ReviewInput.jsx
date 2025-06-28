@@ -2,10 +2,13 @@ import { useState } from "react";
 
 export function ReviewInput(props) {
   const [reviewInputValue, setReviewInputValue] = useState("");
+
+  //Get input value
   const changeReviewInputValue = (e) => {
     setReviewInputValue(e.target.value)
   }
 
+  //Submit input value
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();

@@ -1,6 +1,8 @@
 import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
 
 export function NavigationArrows(props) {
+
+  //Manage disabled Arrows with id
   let prevClass = "hover:fill-lime-800/60 hover:cursor-pointer transition-colors duration-300";
   let nextClass = "hover:fill-lime-800/60 hover:cursor-pointer transition-colors duration-300";
 
