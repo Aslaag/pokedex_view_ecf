@@ -8,7 +8,7 @@ export function Header() {
   return (
     <div 
       onClick={() => navigate(ROUTES.HOME)} 
-      className="bg-lime-800/60 p-2 hover:cursor-pointer">
+      className="flex flex-col justify-center items-center bg-lime-800/60 p-4 shadow-md shadow-lime-800/30 hover:cursor-pointer">
       <Logo/>
     </div>
   )
