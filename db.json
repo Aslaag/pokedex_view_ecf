@@ -2,7 +2,7 @@
   "pokemons": [
     {
       "id": "1",
-      "like": 11,
+      "like": 35,
       "name": "Bulbizarre",
       "types": [
         "Grass",
@@ -72,7 +72,7 @@
     },
     {
       "id": "3",
-      "like": 7,
+      "like": 8,
       "name": "Florizarre",
       "types": [
         "Grass",
@@ -141,7 +141,7 @@
     },
     {
       "id": "5",
-      "like": 12,
+      "like": 13,
       "name": "Reptincel",
       "types": [
         "Fire"
@@ -175,7 +175,7 @@
     },
     {
       "id": "6",
-      "like": 0,
+      "like": 1,
       "name": "Dracaufeu",
       "types": [
         "Fire",
@@ -210,7 +210,7 @@
     },
     {
       "id": "7",
-      "like": 0,
+      "like": 1,
       "name": "Carapuce",
       "types": [
         "Water"
@@ -728,7 +728,7 @@
     },
     {
       "id": "22",
-      "like": 0,
+      "like": 7,
       "name": "Rapasdepic",
       "types": [
         "Normal",
@@ -2034,7 +2034,7 @@
     },
     {
       "id": "60",
-      "like": 0,
+      "like": 1,
       "name": "Ptitard",
       "types": [
         "Water"
@@ -3176,7 +3176,7 @@
     },
     {
       "id": "93",
-      "like": 0,
+      "like": 1,
       "name": "Spectrum",
       "types": [
         "Ghost",
@@ -3451,7 +3451,7 @@
     },
     {
       "id": "101",
-      "like": 0,
+      "like": 1,
       "name": "Électrode",
       "types": [
         "Electric"
@@ -5143,7 +5143,7 @@
     },
     {
       "id": "151",
-      "like": 0,
+      "like": 2,
       "name": "Mew",
       "types": [
         "Psychic"
@@ -5218,7 +5218,7 @@
       "id": "8",
       "author": "Me",
       "content": "Ok this pokemon is my ever favorite, it's actually a dog !",
-      "pokemonId": "1"
+      "pokemonId": "58"
     },
     {
       "id": "9",
@@ -5282,55 +5282,55 @@
     },
     {
       "id": "19",
-      "pokemonId": 5,
+      "pokemonId": 6,
       "author": "Firefighter",
       "content": "Charizard's fire is incredibly intense! It can melt boulders and even generate powerful flames during flight."
     },
     {
       "id": "20",
-      "pokemonId": 6,
+      "pokemonId": 7,
       "author": "Breeder",
       "content": "Bulbasaur, Charmander, and Squirtle are the three original starter Pokemon. They're all popular choices for new trainers due to their well-balanced stats and ease of training."
     },
     {
       "id": "21",
-      "pokemonId": 7,
+      "pokemonId": 9,
       "author": "Gym Leader",
       "content": "Squirtle's final evolution, Blastoise, is a formidable opponent. Its powerful water cannons can pierce through concrete walls!"
     },
     {
       "id": "22",
-      "pokemonId": 8,
+      "pokemonId": 10,
       "author": "Youngster",
       "content": "Caterpie may seem weak, but don't underestimate it! These little bug Pokemon evolve into powerful butterfly Pokemon later."
     },
     {
       "id": "23",
-      "pokemonId": 9,
+      "pokemonId": 11,
       "author": "Bug Catcher",
       "content": "Metapod is the intermediate evolution between Caterpie and Butterfree. During this stage, Metapod hardens its shell in preparation for its final evolution."
     },
     {
       "id": "24",
-      "pokemonId": 10,
+      "pokemonId": 12,
       "author": "Professor",
       "content": "Butterfree is a beautiful butterfly Pokemon known for its graceful flight and powerful psychic abilities."
     },
     {
       "id": "25",
-      "pokemonId": 11,
+      "pokemonId": 13,
       "camper": "Camper",
       "content": "Weedle is a common sight in forests. Be careful when walking through tall grass, you might accidentally step on one!"
     },
     {
       "id": "26",
-      "pokemonId": 12,
+      "pokemonId": 14,
       "author": "Bug Catcher",
       "content": "Kakuna is the hardened shell stage of Weedle's evolution. Just like Metapod, Kakuna is preparing to emerge as a stronger Pokemon."
     },
     {
       "id": "27",
-      "pokemonId": 13,
+      "pokemonId": 15,
       "author": "Scientist",
       "content": "Beedrill is a powerful bug-type Pokemon known for its sharp stinger and aggressive nature. Trainers beware!"
     },
@@ -5378,13 +5378,13 @@
     },
     {
       "id": "37",
-      "pokemonId": 23,
+      "pokemonId": 27,
       "author": "Youngster",
       "content": "Sandshrew is a ground-type Pokemon found in arid regions. It burrows underground to escape the harsh sun and predators."
     },
     {
       "id": "38",
-      "pokemonId": 24,
+      "pokemonId": 28,
       "author": "Excavator",
       "content": "Sandslash, the evolved form of Sandshrew, is a powerful ground-type Pokemon. Its sharp claws and tough hide make it a valuable asset for construction work."
     },
@@ -5402,79 +5402,79 @@
     },
     {
       "id": "41",
-      "pokemonId": 27,
+      "pokemonId": 29,
       "author": "Bug Catcher",
       "content": "Nidoran (female) is a poison-type Pokemon known for its two horn-like protrusions. It's a common sight in many regions."
     },
     {
       "id": "42",
-      "pokemonId": 28,
+      "pokemonId": 32,
       "author": "Bug Catcher",
       "content": "Nidoran (male) is a poison-type Pokemon known for its blue horn. It's the male counterpart of Nidoran (female)."
     },
     {
       "id": "43",
-      "pokemonId": 29,
+      "pokemonId": 30,
       "author": "Breeder",
       "content": "Nidoran can evolve into Nidorina or Nidorino depending on their gender. Nidorina is the female evolution and Nidorino is the male evolution."
     },
     {
       "id": "44",
-      "pokemonId": 30,
+      "pokemonId": 34,
       "author": "Trainer",
-      "content": "Nidorina evolves into Nidoking, a powerful poison/ground type Pokemon. Nidoking is known for its impressive strength and territorial nature."
+      "content": "Nidorino evolves into Nidoking, a powerful poison/ground type Pokemon. Nidoking is known for its impressive strength and territorial nature."
     },
     {
       "id": "45",
       "pokemonId": 31,
       "author": "Trainer",
-      "content": "Nidorino evolves into Nidqueen, a powerful poison/ground type Pokemon. Nidqueen is known for its durability and protective instincts."
+      "content": "Nidorina evolves into Nidqueen, a powerful poison/ground type Pokemon. Nidqueen is known for its durability and protective instincts."
     },
     {
       "id": "46",
-      "pokemonId": 32,
+      "pokemonId": 35,
       "author": "Breeder",
       "content": "Clefairy is a fairy-type Pokemon known for its metronome-like tail. It is said to bring good luck to its trainer."
     },
     {
       "id": "47",
-      "pokemonId": 33,
+      "pokemonId": 36,
       "author": "Psychic Trainer",
       "content": "Clefairy evolves into Clefable, a powerful fairy-type Pokemon. Clefable is known for its healing abilities and gentle nature."
     },
     {
       "id": "48",
-      "pokemonId": 34,
+      "pokemonId": 54,
       "author": "Police Officer",
       "content": "Psyduck is a duck-like Pokemon known for its constant headaches. Despite the headaches, Psyduck possesses strong psychic abilities."
     },
     {
       "id": "49",
-      "pokemonId": 35,
+      "pokemonId": 55,
       "author": "Professor",
       "content": "Psyduck evolves into Golduck, a powerful psychic-type Pokemon. Golduck is known for its intelligence and powerful psychic attacks."
     },
     {
       "id": "50",
-      "pokemonId": 36,
+      "pokemonId": 56,
       "author": "Sailor",
       "content": "Mankey is a fighting-type Pokemon known for its energetic personality and mischievous behavior. It's a popular choice for trainers who specialize in close-quarters combat."
     },
     {
       "id": "51",
-      "pokemonId": 37,
+      "pokemonId": 57,
       "author": "Trainer",
       "content": "Mankey evolves into Primeape, a strong and aggressive fighting-type Pokemon. Primeape is known for its incredible strength and short temper."
     },
     {
       "id": "52",
-      "pokemonId": 38,
+      "pokemonId": 58,
       "author": "Breeder",
       "content": "Growlithe is a fire-type Pokemon known for its loyalty and bravery. It's a popular choice for beginner trainers due to its friendly nature and eagerness to please."
     },
     {
       "id": "53",
-      "pokemonId": 39,
+      "pokemonId": 59,
       "author": "Firefighter",
       "content": "Growlithe evolves into Arcanine, a powerful fire-type Pokemon. Arcanine is known for its incredible speed and fiery breath."
     },
@@ -5493,14 +5493,56 @@
     {
       "id": "7817",
       "author": "Me",
-      "content": "Super",
+      "content": "Insane !!",
       "pokemonId": "33"
     },
     {
       "id": "d896",
       "author": "Me",
-      "content": "J'adore ce pokemon",
+      "content": "I love this pokemon !",
       "pokemonId": "1"
+    },
+    {
+      "id": "8a12",
+      "pokemonId": "101",
+      "author": "Me",
+      "content": "EXPLOSION"
+    },
+    {
+      "id": "76ca",
+      "pokemonId": "5",
+      "author": "Me",
+      "content": "Not the best but cute !"
+    },
+    {
+      "id": "2931",
+      "pokemonId": "6",
+      "author": "Me",
+      "content": "Hi Charizard !!!"
+    },
+    {
+      "id": "8b93",
+      "pokemonId": "60",
+      "author": "Me",
+      "content": "My favourite as a child <3"
+    },
+    {
+      "id": "c48e",
+      "pokemonId": "93",
+      "author": "Me",
+      "content": "I love this pokemon !"
+    },
+    {
+      "id": "de5d",
+      "pokemonId": "93",
+      "author": "Me",
+      "content": "Poison me Spectrum <3"
+    },
+    {
+      "id": "1b0d",
+      "pokemonId": "8",
+      "author": "Me",
+      "content": "I love Wartortle <3"
     }
   ]
 }
