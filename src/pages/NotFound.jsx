@@ -2,8 +2,9 @@ import { IMG } from "../constants/pokedex-const";
 
 export function NotFound() {
   return (
-    <div className="flex flex-col items-center pt-10 gap-2">
-      <h2 className="uppercase">uh oh, no pokemon here...</h2>
+    <div className="flex flex-col items-center justify-center h-[800px] bg-contain bg-no-repeat bg-center gap-10"
+    style={{ backgroundImage: `url(${IMG.BG_IMG})` }}>
+      <h2 className="uppercase font-black">uh oh, no pokemon here...</h2>
       <img src={IMG.IMG_NOT_FOUND} alt="" className="rounded-2xl shadow-2xl" />
     </div>
   )

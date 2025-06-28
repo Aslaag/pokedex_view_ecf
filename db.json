@@ -175,7 +175,7 @@
     },
     {
       "id": "6",
-      "like": 0,
+      "like": 1,
       "name": "Dracaufeu",
       "types": [
         "Fire",
@@ -3176,7 +3176,7 @@
     },
     {
       "id": "93",
-      "like": 0,
+      "like": 1,
       "name": "Spectrum",
       "types": [
         "Ghost",
@@ -5525,6 +5525,18 @@
       "pokemonId": "60",
       "author": "Me",
       "content": "My favourite as a child <3"
+    },
+    {
+      "id": "c48e",
+      "pokemonId": "93",
+      "author": "Me",
+      "content": "I love this pokemon !"
+    },
+    {
+      "id": "de5d",
+      "pokemonId": "93",
+      "author": "Me",
+      "content": "Poison me Spectrum <3"
     }
   ]
 }

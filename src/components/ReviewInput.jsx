@@ -21,7 +21,7 @@ export function ReviewInput(props) {
          onKeyDown={handleKeyDown}
           type="text" 
           placeholder="Add a review..." 
-          className="border-1 rounded-xl placeholder:p-2" />
+          className="border-2 border-lime-500/50 py-1 px-3 rounded-xl w-[90%] text:text-lime-700 placeholder:text-sm placeholder:text-lime-700 hover:bg-lime-50 transition-all transition-300" />
     </>
   )
 }

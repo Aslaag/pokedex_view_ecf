@@ -8,7 +8,7 @@ export function TypeTag(props) {
 
   return (
     <p
-      className="border px-3 py-1 rounded-2xl text-sm text-white"
+      className="px-3 py-1 rounded-2xl text-sm text-white"
       style={{ backgroundColor: bgColor }}
     >
       {props.name}

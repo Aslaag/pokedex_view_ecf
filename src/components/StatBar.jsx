@@ -19,7 +19,7 @@ export function StatBar(props) {
           <p>{props.value}</p>
           <span className="relative w-52 h-3 border-1 bg-gray-200 rounded-2xl overflow-hidden">
             <span 
-              className="absolute h-2.5 bg-blue-500 rounded-l-2xl rounded-r-lg transition-all transition-500"
+              className="absolute h-2.5 bg-lime-600/70 rounded-l-2xl rounded-r-lg transition-all transition-500"
               style={{ width: `${fillBar}%` }}/>
           </span>
         </div>

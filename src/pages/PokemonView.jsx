@@ -6,6 +6,7 @@ import { ReviewsContainer } from "../components/ReviewsContainer";
 import { Stats } from "../components/Stats";
 import { TypeTag } from "../components/TypeTag";
 import { IMG } from "../constants/pokedex-const";
+import { ROUTES } from "../routes/Routes";
 import { fetchPokemon, updatePokemon } from "../utils/pokemon-utils";
 
 
@@ -33,19 +34,26 @@ export function PokemonView() {
     try {
       await updatePokemon(pokemon.id, newLikes);
     } catch (error) {
-      console.error("Erreur lors de la mise à jour des likes :", error);
       setLikes(likes);
     }
   }
   
+  useEffect(() => {
     async function loadPokemon() {
-      const pokemonData = await fetchPokemon(id);
-      setPokemon(pokemonData);
+      try {
+        const pokemonData = await fetchPokemon(id);
+        if (!pokemonData) {
+          navigate(ROUTES.NOT_FOUND);
+          return;
+        }
+        setPokemon(pokemonData);
+      } catch (error) {
+        navigate(ROUTES.NOT_FOUND);
+      }
     }
-  
-    useEffect(() => {
-      loadPokemon();
-    }, [id]);
+
+    loadPokemon();
+  }, [id]);
 
      useEffect(() => {
       if (pokemon) {
@@ -59,14 +67,18 @@ export function PokemonView() {
   }, [currentId]);
   
   return (
-    <div>
+    <div className="pt-5">
     <NavigationArrows isNextDisabled={isNextDisabled} isPrevDisabled={isPrevDisabled} goToPrev={goToPrev} goToNext={goToNext}/>
-    <section className="grid grid-cols-3 gap-10 p-5">
-      <img src={IMG.POKEMON_IMG.replace(":id", id)} alt="" />
-      <div className="flex flex-col items-center">
+    <section 
+    className="flex justify-around gap-10 px-10 pt-20 bg-contain bg-center bg-no-repeat h-[700px]"
+    style={{ backgroundImage: `url(${IMG.BG_IMG})` }}>
+      <div className="w-1/3 h-full justify-center flex">
+        <img src={IMG.POKEMON_IMG.replace(":id", id)} alt="" />
+      </div>
+      <div className="flex flex-col items-center w-1/3 gap-10">
         <div className="flex w-full justify-start">
-          <div className="flex flex-col mx-auto">
-            {pokemon && <h2 className="uppercase">{pokemon.name}</h2>}
+          <div className="flex flex-col mx-auto gap-10 items-center">
+            {pokemon && <h2 className="text-5xl">{pokemon.name}</h2>}
             {pokemon && <div className="flex gap-2">
               {pokemon.types.map((type) => (
                 <TypeTag key={type} name={type}/>
@@ -89,7 +101,7 @@ export function PokemonView() {
         </div>
         {pokemon &&  <Stats id={pokemon.id} stats={pokemon.base}/>}
       </div>
-      <div>
+      <div className="w-1/3">
         {pokemon &&  <ReviewsContainer id={pokemon.id}/>}
       </div>
     </section>
