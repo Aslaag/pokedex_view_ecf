@@ -68,43 +68,43 @@ export function PokemonView() {
   
   return (
     <div className="pt-5">
-    <NavigationArrows isNextDisabled={isNextDisabled} isPrevDisabled={isPrevDisabled} goToPrev={goToPrev} goToNext={goToNext}/>
-    <section 
-    className="flex justify-around gap-10 px-10 pt-20 bg-contain bg-center bg-no-repeat h-[700px]"
-    style={{ backgroundImage: `url(${IMG.BG_IMG})` }}>
-      <div className="w-1/3 h-full justify-center flex">
-        <img src={IMG.POKEMON_IMG.replace(":id", id)} alt="" />
-      </div>
-      <div className="flex flex-col items-center w-1/3 gap-10">
-        <div className="flex w-full justify-start">
-          <div className="flex flex-col mx-auto gap-10 items-center">
-            {pokemon && <h2 className="text-5xl">{pokemon.name}</h2>}
-            {pokemon && <div className="flex gap-2">
-              {pokemon.types.map((type) => (
-                <TypeTag key={type} name={type}/>
-                )
-              )}
-            </div>}
-          </div>
-          <div className="flex items-center gap-1">
-            <p className="flex">{likes}</p>
-            <button
-              type="button"
-              className="hover:cursor-pointer" 
-              onClick={(e) => {
-                e.preventDefault();
-                addLike();
-              }}>
-              <Heart fill="red"/>
-            </button>
-          </div>
+      <NavigationArrows isNextDisabled={isNextDisabled} isPrevDisabled={isPrevDisabled} goToPrev={goToPrev} goToNext={goToNext}/>
+      <section 
+      className="flex flex-col md:flex-row justify-around gap-10 px-10 pt-20 bg-contain bg-center bg-no-repeat h-[700px]"
+      style={{ backgroundImage: `url(${IMG.BG_IMG})` }}>
+        <div className="md:w-1/3 h-full justify-center flex">
+          <img src={IMG.POKEMON_IMG.replace(":id", id)} alt="" />
         </div>
-        {pokemon &&  <Stats id={pokemon.id} stats={pokemon.base}/>}
-      </div>
-      <div className="w-1/3">
-        {pokemon &&  <ReviewsContainer id={pokemon.id}/>}
-      </div>
-    </section>
+        <div className="flex flex-col items-center md:w-1/3 gap-10">
+          <div className="flex flex-col md:flex-row w-full justify-start">
+            <div className="flex flex-col mx-auto gap-10 items-center">
+              {pokemon && <h2 className="text-5xl">{pokemon.name}</h2>}
+              {pokemon && <div className="flex gap-2">
+                {pokemon.types.map((type) => (
+                  <TypeTag key={type} name={type}/>
+                  )
+                )}
+              </div>}
+            </div>
+            <div className="flex justify-center pt-5 items-center gap-1">
+              <p className="flex">{likes}</p>
+              <button
+                type="button"
+                className="hover:cursor-pointer" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  addLike();
+                }}>
+                <Heart fill="red"/>
+              </button>
+            </div>
+          </div>
+          {pokemon &&  <Stats id={pokemon.id} stats={pokemon.base}/>}
+        </div>
+        <div className="md:w-1/3">
+          {pokemon &&  <ReviewsContainer id={pokemon.id}/>}
+        </div>
+      </section>
     </div>
   )
 }

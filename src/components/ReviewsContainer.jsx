@@ -24,7 +24,7 @@ export function ReviewsContainer(props) {
     }, [reviewQuery]);
 
   return (
-    <div className="pl-10 flex flex-col gap-5">
+    <div className="py-5 md:py-10 flex flex-col gap-5">
       <h2 className="text-lg font-bold">Reviews</h2>
       <div className="flex flex-col gap-6 p-1">
         <ReviewInput onSubmitReview={setReviewQuery}/>
