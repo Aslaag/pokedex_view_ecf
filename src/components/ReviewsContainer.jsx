@@ -28,7 +28,7 @@ export function ReviewsContainer(props) {
       <h2 className="text-lg font-bold">Reviews</h2>
       <div className="flex flex-col gap-6 p-1">
         <ReviewInput onSubmitReview={setReviewQuery}/>
-        {pokemonReviews && <div className="flex flex-col gap-4">
+        {pokemonReviews && <div className="flex flex-col gap-4 md:h-[500px] md:overflow-y-scroll">
           {pokemonReviews.map((review) => (
             <ReviewCard key={review.id} author={review.author} content={review.content}/>
             )
