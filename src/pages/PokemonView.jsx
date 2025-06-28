@@ -34,6 +34,7 @@ export function PokemonView() {
     try {
       await updatePokemon(pokemon.id, newLikes);
     } catch (error) {
+      console.error("error : ", error);
       setLikes(likes);
     }
   }
@@ -48,6 +49,7 @@ export function PokemonView() {
         }
         setPokemon(pokemonData);
       } catch (error) {
+        console.error("error : ", error)
         navigate(ROUTES.NOT_FOUND);
       }
     }

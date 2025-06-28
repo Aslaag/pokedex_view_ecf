@@ -2,7 +2,7 @@
   "pokemons": [
     {
       "id": "1",
-      "like": 34,
+      "like": 35,
       "name": "Bulbizarre",
       "types": [
         "Grass",
@@ -5537,6 +5537,12 @@
       "pokemonId": "93",
       "author": "Me",
       "content": "Poison me Spectrum <3"
+    },
+    {
+      "id": "1b0d",
+      "pokemonId": "8",
+      "author": "Me",
+      "content": "I love Wartortle <3"
     }
   ]
 }
